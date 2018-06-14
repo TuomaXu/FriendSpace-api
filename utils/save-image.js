@@ -23,7 +23,7 @@ export default (fileBuffer)=>{
                 reject(err);
             } else {
                 console.log('文件写入成功');
-                callBack('http://60.205.141.116:9010/resource/image/'+`${filename}.png`);
+                callBack(`${filename}.png`);
             }
         });
     });

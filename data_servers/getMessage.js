@@ -1,10 +1,10 @@
 import Sequelize  from 'sequelize';
 import sequelize from '../data-model/data-base';
 
-const Message = sequelize.model('fs_message');
-const Account = sequelize.model('fs_account');
-const User = sequelize.model('fs_user');
-const Image = sequelize.model('fs_image');
+const Message = sequelize.model('message');
+const Account = sequelize.model('account');
+const User = sequelize.model('user');
+const Image = sequelize.model('image');
 
 const Op = Sequelize.Op;
 
@@ -15,8 +15,8 @@ export default async (req,res)=>{
     if(!account){
         return res.json({
             success:false,
-            message:'access_token无效',
-            code:10003,
+            errorMessage:'access_token无效',
+            errorCode:10003,
         })
     }
 

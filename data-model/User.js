@@ -1,5 +1,5 @@
 export default (sequelize, DataTypes)=>{
-    return sequelize.define('fs_user',{
+    return sequelize.define('user',{
         nickname:DataTypes.STRING,
         image:DataTypes.STRING,
         sign:DataTypes.STRING,

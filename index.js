@@ -11,8 +11,7 @@ import sequelize from './data-model/data-base';
 import register from './data_servers/register';
 import login from './data_servers/login';
 import createUser from './data_servers/createUser';
-import postAppMessage from './data_servers/postAppMessage';
-import postWebMessage from './data_servers/postWebMessage';
+import postMessage from './data_servers/postAppMessage';
 import deleteMessage from './data_servers/deleteMessage';
 import follow from './data_servers/follow';
 import unFollow from './data_servers/unFollow';
@@ -54,8 +53,7 @@ app.use(multer().any());
 app.post('/api/register',register);
 app.post('/api/login',login);
 app.post('/api/createUser',createUser);
-app.post('/api/postAppMessage',postAppMessage);
-app.post('/api/postWebMessage',postWebMessage);
+app.post('/api/postMessage',postMessage);
 app.post('/api/deleteMessage',deleteMessage);
 app.post('/api/follow',follow);
 app.post('/api/unFollow',unFollow);
@@ -70,8 +68,8 @@ app.post('/api/changePassword',changePassword);
 
 
 //开启监听服务
-const server = app.listen(5000,()=>{
-	console.log('开启成功，访问http://localhost:9010');
+const server = app.listen(60004,()=>{
+	console.log('开启成功，访问http://60.205.141.116:60004');
 });
 
 

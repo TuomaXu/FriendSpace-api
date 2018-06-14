@@ -1,5 +1,5 @@
 export default (sequelize, DataTypes)=>{
-    return sequelize.define('fs_message',{
+    return sequelize.define('message',{
         content:DataTypes.STRING,
     });
 }

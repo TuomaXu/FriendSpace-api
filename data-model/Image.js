@@ -1,5 +1,5 @@
 export default (sequelize, DataTypes)=>{
-    return sequelize.define('fs_image',{
+    return sequelize.define('image',{
         url:DataTypes.STRING,
     });
 }

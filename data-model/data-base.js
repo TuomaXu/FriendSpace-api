@@ -3,7 +3,7 @@ import Sequelize  from 'sequelize';
 
 //通过Sequelize构造方法创建Sequelize实例并链接数据库
 const sequelize = new Sequelize(
-  'api',
+  'friend_space_api',
   'root',
   '',
   {
@@ -49,7 +49,7 @@ User.belongsToMany(User,{
 
 
 //同步数据
-sequelize.sync({force:true});
+sequelize.sync({force:false});
 
 
 export default sequelize;

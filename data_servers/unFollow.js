@@ -1,8 +1,8 @@
 import sequelize from '../data-model/data-base';
 
-const Account = sequelize.model('fs_account');
-const User = sequelize.model('fs_user');
-const FriendShip = sequelize.model('fs_friendship');
+const Account = sequelize.model('account');
+const User = sequelize.model('user');
+const FriendShip = sequelize.model('friendship');
 
 export default async (req,res)=>{
     
@@ -11,8 +11,8 @@ export default async (req,res)=>{
     if(!account){
         return res.json({
             success:false,
-            message:'access_token无效',
-            code:10003,
+            errorMessage:'access_token无效',
+            errorCode:10003,
         })
     }
 

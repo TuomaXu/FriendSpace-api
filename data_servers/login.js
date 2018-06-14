@@ -1,8 +1,8 @@
 import sequelize from '../data-model/data-base';
 import createToken from '../utils/create-token';
 
-const Account = sequelize.model('fs_account');
-const User = sequelize.model('fs_user');
+const Account = sequelize.model('account');
+const User = sequelize.model('user');
 
 export default async (req,res)=>{
 
@@ -15,8 +15,8 @@ export default async (req,res)=>{
     if(!account){
         return res.json({
             success:false,
-            message:'用户名或密码错误',
-            code:10002
+            errorMessage:'用户名或密码错误',
+            errorCode:10002
         });
     }
 

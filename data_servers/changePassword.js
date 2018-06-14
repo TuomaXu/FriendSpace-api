@@ -1,6 +1,6 @@
 import sequelize from '../data-model/data-base';
 
-const Account = sequelize.model('fs_account');
+const Account = sequelize.model('account');
 
 export default async (req,res)=>{
     
@@ -13,16 +13,16 @@ export default async (req,res)=>{
     if(!account){
         return res.json({
             success:false,
-            message:'access_token无效',
-            code:10003
+            errorMessage:'access_token无效',
+            errorCode:10003
         });
     }
 
     if(account.password != old_password){
         return res.json({
             success:false,
-            message:'旧密码错误',
-            code:10006
+            errorMessage:'旧密码错误',
+            errorCode:10006
         });
     }
 

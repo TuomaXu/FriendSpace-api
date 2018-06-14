@@ -1,10 +1,10 @@
 import saveImage from '../utils/save-image';
 import sequelize from '../data-model/data-base';
 
-const Message = sequelize.model('fs_message');
-const Account = sequelize.model('fs_account');
-const User = sequelize.model('fs_user');
-const Image = sequelize.model('fs_image');
+const Message = sequelize.model('message');
+const Account = sequelize.model('account');
+const User = sequelize.model('user');
+const Image = sequelize.model('image');
 
 export default async (req,res)=>{
 
@@ -16,8 +16,8 @@ export default async (req,res)=>{
     if(!account){
         return res.json({
             success:false,
-            message:'access_token无效',
-            code:10003,
+            errorMessage:'access_token无效',
+            errorCode:10003,
         })
     }
 
@@ -26,8 +26,8 @@ export default async (req,res)=>{
     if(!user){
         return res.json({
             success:false,
-            message:'未初始化用户信息',
-            code:10004,
+            errorMessage:'未初始化用户信息',
+            errorCode:10004,
         })
     }   
 

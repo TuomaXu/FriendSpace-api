@@ -1,7 +1,7 @@
 import sequelize from '../data-model/data-base';
 import createToken from '../utils/create-token';
 
-const Account = sequelize.model('fs_account');
+const Account = sequelize.model('account');
 
 export default async (req,res)=>{
     
@@ -10,8 +10,8 @@ export default async (req,res)=>{
     if(temp){
         return res.json({
             success:false,
-            message:'用户名已存在',
-            code:10001,
+            errorMessage:'用户名已存在',
+            errorCode:10001,
         })
     }
 
