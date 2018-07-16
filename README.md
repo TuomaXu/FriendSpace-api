@@ -297,7 +297,7 @@
 
 ### 取消关注好友
 
-请求链接：`/api/follow`
+请求链接：`/api/unFollow`
 
 请求方式：`POST`
 
